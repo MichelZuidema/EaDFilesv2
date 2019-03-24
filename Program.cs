@@ -75,7 +75,13 @@ namespace EaDFilesv2
         }
 
         static void DecryptTextFile() {
+            Console.WriteLine("Enter filename: ");
+            string filename = Console.ReadLine();
+            string filecontent = GetContentFromFile(filename);
+            string decryptedcontent = EncryptDecrypt.Decrypt(filecontent);
 
+            string newFileName = filename + "-decrypted.txt";
+            WriteToFile(newFileName, decryptedcontent);
         }
 
         static void DecryptText() {
