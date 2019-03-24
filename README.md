@@ -19,8 +19,6 @@ If you run this code on a Windows machine, use a C# debugger like Microsoft Visu
 
 * **Michel Zuidema** - https://github.com/MichelZuidema
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
