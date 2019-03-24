@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Collections.Generic;
 using EncryptAndDecrypt;
 
 namespace EaDFilesv2
@@ -34,12 +36,33 @@ namespace EaDFilesv2
             }
         }
 
-        static void GetContentFromFile(string filename) {
+        static string GetContentFromFile(string filename) {
+            if(File.Exists(filename)) {
+                using(StreamReader sr = new StreamReader(filename)) {
+                    string filecontent = sr.ReadToEnd();
+                    return filecontent;
+                }
+            } else {
+                string error = "404. File not found!";
+                return error;
+            }
+        }
 
+        static void WriteToFile(string filename, string filecontent) {
+            using(StreamWriter sw = new StreamWriter(filename)) {
+                sw.WriteLine(filecontent);
+                Console.WriteLine("Content written to file!");
+            } 
         }
 
         static void EncryptTextFile() {
+            Console.WriteLine("Enter filename: ");
+            string filename = Console.ReadLine();
+            string filecontent = GetContentFromFile(filename);
+            string encryptedcontent = EncryptDecrypt.Encrypt(filecontent);
 
+            string newFileName = filename + "-encrypted.txt";
+            WriteToFile(newFileName, encryptedcontent);
         }
 
         static void EncryptText() {
