@@ -34,6 +34,8 @@ namespace EaDFilesv2
                     Console.WriteLine("Not a valid input.");
                     break;
             }
+
+            Exit();
         }
 
         static string GetContentFromFile(string filename) {
@@ -91,6 +93,10 @@ namespace EaDFilesv2
 
             Console.WriteLine("Encrypted Text: {0}", encryptedText);
             Console.WriteLine("Decrypted Text: {0}", decryptedText);
+        }
+
+        static void Exit() {
+            Console.WriteLine("Thank you for using this script. This script has been made by Michel Zuidema.");
         }
     }
 }
