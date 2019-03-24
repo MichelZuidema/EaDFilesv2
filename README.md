@@ -17,7 +17,7 @@ dotnet run
 If you run this code on a Windows machine, use a C# debugger like Microsoft Visual Studio.
 ## Authors
 
-* **Michel Zuidema** - *Initial work* - [PurpleBooth](hhttps://github.com/MichelZuidema)
+* **Michel Zuidema** - https://github.com/MichelZuidema
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
